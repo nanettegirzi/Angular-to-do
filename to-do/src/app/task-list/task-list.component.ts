@@ -25,4 +25,14 @@ import { Task } from '../models/task.model';
     }
   }
 
+  filterByCompleteness: string = "incompleteTasks";
+
+  onChange(optionFromMenu) {
+    this.filterByCompleteness = optionFromMenu;
+  }
+
+  toggleDone(clickedTask: Task, setCompleteness: boolean) {
+    clickedTask.done = setCompleteness;
+  }
+
 }
